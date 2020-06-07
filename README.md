@@ -7,6 +7,7 @@
 Step 1: Download Repositary, Open Netbeans IDE and open project 'Newsletter_WnCC' and run Newsletter.java or run the project itslf(Newsletter.java is main frame in project)
 
 
+
 Step 2: Run project and follow the GUI
 
 ![1](https://github.com/DivyanshNatani/WnCC_Newsletter/blob/master/img/NewsLetter1.JPG?raw=true)
