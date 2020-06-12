@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WnCC_Newsletter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* background-image: url(./background/bg.jpg); */
+            background-color: rgb(162, 118, 102);
+            font-family: 'Tenali Ramakrishna', sans-serif;
+            
+        }
+
+        header:before {
+            content: "";
+            background-image: url(./background/bg.jpg);
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 120%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        #header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 60px;
+            text-decoration: underline;
+            color:black;
+            margin: 8px auto;
+            padding: 8px;
+        }
+
+        img {
+            width: 180px;
+            height: 60px;
+            filter: invert(100%);
+            margin-bottom: 10px;
+
+        }
+
+        #main-page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
+        #get-numbers {
+            display: none;
+            flex-direction: column;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        #article {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px;
+            margin-left: 30px;
+
+
+        }
+
+        #meme {
+            display: none;
+            flex-direction: column;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        #success {
+            display: none;
+            flex-direction: column;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+
+        .form>div {
+            font-weight: bold;
+            font-size: 30px;
+            padding: 4px 12px;
+            margin: 4px 10px;
+        }
+
+
+        .article-text,
+        .meme-text {
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            display: flex;
+            font-size: 50px;
+
+
+        }
+
+        input,
+        select {
+            margin-left: 20px;
+            padding: 6px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            width: 200px;
+            background-color: lightgray;
+        }
+
+        button {
+            font-family: 'Tenali Ramakrishna', sans-serif;
+            padding: 5px 10px;
+            font-size: 20px;
+            margin-left: 100px;
+            margin-top: 20px;
+            border: 2px solid white;
+            color: white;
+            background-color: rgb(134, 134, 173);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: white;
+            font-weight: bold;
+            color: rgb(134, 134, 173);
+            border-color: rgb(134, 134, 173);
+        }
+        h1{text-align: center;
+            font-size: 60px;
+        }
+         @media (max-width: 979px){
+            body {
+            background-image: url(./background/bg.jpg);
+            background-color: rgb(162, 118, 102);
+            font-family: 'Tenali Ramakrishna', sans-serif;
+            
+        }
+
+        header:before {
+            content: "";
+            /* background-image: url(./background/bg.jpg); */
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 120%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        } 
+    </style>
+    
+</head>
+
+<body>
+    <header></header> 
+    <div id="header">
+        <img src="./background/logo_white.png" alt="wncc" srcset="">
+        WnCC Newsletter Designer
+    </div>
+    <div id="main-page">
+
+        <div id="codesection">
+
+            <div id="get-numbers">
+
+                <div class="form">
+                    <div>
+                        <label for="no-news-article">No of News Article</label>
+                        <input type="number" name="news_link" id="no-news-article" min="0" value="5">
+                    </div>
+                    <div>
+                        <label for="no-other-news-article">No of Other News Article</label>
+                        <input type="number" name="news_link" id="no-other-news-article" min="0" value="2">
+                    </div>
+                    <div>
+                        <label for="meme-no">No of Memes</label>
+                        <input type="number" name="news_link" id="meme-no" min="0" value="3">
+                    </div>
+                    <button onclick="getData()">Get Started</button>
+                </div>
+            </div>
+            <div id="article">
+                <div class="article-text">
+                    <div id="article-name">
+                        Article No. &nbsp;
+                    </div>
+                    <div id="no-of-article">
+                        1
+                    </div>
+                </div>
+
+
+
+                <div class="form">
+                    <div>
+                        <label for="news-link">News Link</label>
+                        <input type="text" name="news_link" id="news-link">
+                    </div>
+                    <div>
+                        <label for="news-head">News Heading</label>
+                        <input type="text" name="news_link" id="news-head">
+                    </div>
+                    <div>
+                        <label for="img-link">Image link</label>
+                        <input type="text" name="news_link" id="img-link">
+                    </div>
+                    <div>
+                        <label for="img-alt">Image Alt</label>
+                        <input type="text" name="news_link" id="img-alt">
+                    </div>
+                    <div>
+                        <label for="news-desc">News Description</label>
+                        <input type="text" name="news_link" id="news-desc">
+                    </div>
+                    <div id="btn-text">
+                        <label for="btn-type">Button Type</label>
+                        <select name="btn-type" id="btn-type" class="combp">
+                            <option value="Read More">Read More</option>
+                            <option value="Check Out">Check Out</option>
+                            <option value="Check it Out">Check it Out</option>
+                        </select><br>
+                        <button onclick="getArticleData()">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="meme">
+                <div class="meme-text">
+                    Meme No. &nbsp;
+                    <div id="no-of-meme">
+                        1
+                    </div>
+                </div>
+                <div class="form">
+                    <div>
+                        <label for="meme-link">Meme Image Link</label>
+                        <input type="text" name="news_link" id="meme-link">
+                    </div>
+                    <div>
+                        <label for="meme-alt">Meme Image Alt</label>
+                        <input type="text" name="news_link" id="meme-alt">
+                    </div>
+                    <button id="meme-btn" style="margin-top: 10px;" onclick="getMemeData()">Submit</button>
+                </div>
+            </div>
+            <div id="success">
+                <h1>Newsletter Succesfully Designed!!</h1>
+                <button onclick="copyToClipboard()" style="margin: auto; font-size: 30px; padding: 10px;">Copy to Clipboard</button>
+            </div>
+        </div>
+        <div id="display-section" style="opacity: 0.8;">
+
+            <div id="textbox">
+                <textarea name="text-box" id="textarea" cols=60 rows=32 readonly></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./index.js">
+
+
+</script>
+
+</html>
