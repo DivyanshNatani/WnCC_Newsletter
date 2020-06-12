@@ -2,10 +2,10 @@
 
 ## Newsletter Designer
 
-#### Update 1
+### Update 1
 **Check out the HTML beta version of same program [here](https://divyanshnatani.github.io/WnCC_Newsletter/index.html)**
 (No prerequisite software required)
-#### Parent Software
+### Parent Software
 
 
 
